@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riepilogo di Elettrotecnica - Formule e Metodi Fondamentali - Digital Garden</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fafafa;
+        }
+        
+        .header {
+            border-bottom: 2px solid #e1e1e1;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+        
+        .breadcrumb {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .breadcrumb a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .meta {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .sidebar h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            border-bottom: 1px solid #e1e1e1;
+            padding-bottom: 10px;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .sidebar li {
+            margin-bottom: 5px;
+        }
+        
+        .sidebar a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        
+        .internal-link {
+            color: #0066cc;
+            text-decoration: none;
+            border-bottom: 1px dotted #0066cc;
+        }
+        
+        .internal-link:hover {
+            background-color: #f0f8ff;
+            text-decoration: none;
+        }
+        
+        .broken-link {
+            color: #cc0000;
+            text-decoration: none;
+            border-bottom: 1px dotted #cc0000;
+        }
+        
+        .toc {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .toc ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .highlight {
+            background: #f8f8f8;
+            border: 1px solid #e1e1e1;
+            border-radius: 4px;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        
+        blockquote {
+            border-left: 4px solid #0066cc;
+            margin: 0;
+            padding: 0 20px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #e1e1e1;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #666;
+            font-size: 0.8em;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e1e1e1;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="breadcrumb"><a href="index.html">🏠 Home</a></div>
+        <h1>Riepilogo di Elettrotecnica - Formule e Metodi Fondamentali</h1>
+        <div class="meta">Ultima modifica: 20/06/2025</div>
+    </div>
+    
+    <div class="content">
+        <h4 id="1-concetti-di-base-e-corrente-continua-cc"><strong>1. Concetti di Base e Corrente Continua (CC)</strong><a class="toc-link" href="#1-concetti-di-base-e-corrente-continua-cc" title="Permanent link">&para;</a></h4>
+<p><strong>1.1. Definizioni Fondamentali</strong></p>
+<ul>
+<li><strong>Tensione ($V$)</strong>: La differenza di potenziale elettrico tra due punti, che "spinge" le cariche. Si misura in <strong>Volt (V)</strong>.</li>
+<li><strong>Corrente ($I$)</strong>: Il flusso di carica elettrica che attraversa un conduttore in un dato tempo. Si misura in <strong>Ampere (A)</strong>.</li>
+<li><strong>Resistenza ($R$)</strong>: L'opposizione di un componente al passaggio della corrente. Si misura in <strong>Ohm (Ω)</strong>.</li>
+</ul>
+<p>1.2. Legge di Ohm</p>
+<p>La relazione fondamentale che lega le tre grandezze in un circuito resistivo.</p>
+<ul>
+<li><strong>Formula Principale:</strong> $V=I⋅R$</li>
+<li><strong>Formule Inverse:</strong> $I=RV$​ e $R=IV​$</li>
+</ul>
+<p><strong>1.3. Leggi di Kirchhoff</strong></p>
+<ul>
+<li>
+<p><strong>Prima Legge di Kirchhoff (KCL - Legge dei Nodi):</strong></p>
+<ul>
+<li><strong>Definizione:</strong> La somma delle correnti che entrano in un nodo (punto di connessione) è sempre uguale alla somma delle correnti che ne escono.</li>
+<li><strong>Formula:</strong> $∑I_{entranti}​=∑I_{uscenti}​$</li>
+<li>
+<p><strong>Seconda Legge di Kirchhoff (KVL - Legge delle Maglie):</strong></p>
+</li>
+<li>
+<p><strong>Definizione:</strong> La somma algebrica delle tensioni (tensioni dei generatori e cadute di tensione sui componenti) lungo un qualsiasi percorso chiuso (maglia) è sempre uguale a zero.</p>
+</li>
+<li><strong>Formula:</strong> $∑V=0$</li>
+</ul>
+</li>
+</ul>
+<p><strong>1.4. Collegamenti di Resistori</strong>
+- <strong>In Serie:</strong>
+    - <strong>Proprietà:</strong> I componenti sono attraversati dalla <strong>stessa corrente</strong>. La tensione totale si divide tra di loro.
+    - <strong>Resistenza Equivalente:</strong> $Req​=R1​+R2​+...+Rn​$
+- <strong>In Parallelo:</strong>
+    - <strong>Proprietà:</strong> Ai capi dei componenti c'è la <strong>stessa tensione</strong>. La corrente totale si divide tra i rami.
+    - <strong>Resistenza Equivalente (2 resistori):</strong> $Req​=\frac{R_2​R_1}{​R_1​+ R_2​​}$
+    - <strong>Resistenza Equivalente (generale):</strong> $\frac{1}{R_{eq}​}​=\frac{1}{R_1​}​+\frac{1}{R_2}​+ \dots+ \frac{1}{R_n​}​$</p>
+<hr />
+<h4 id="2-corrente-alternata-ca-in-regime-sinusoidale"><strong>2. Corrente Alternata (CA) in Regime Sinusoidale</strong><a class="toc-link" href="#2-corrente-alternata-ca-in-regime-sinusoidale" title="Permanent link">&para;</a></h4>
+<p><strong>2.1. Concetti Chiave della CA</strong></p>
+<ul>
+<li><strong>Fasore</strong>: Un vettore rotante usato per rappresentare un'onda sinusoidale. Semplifica i calcoli trasformando le funzioni trigonometriche in algebra con i numeri complessi.<ul>
+<li><strong>Notazione Polare:</strong> $V = Vmax​∠θ (es. 10∠30∘ V)$</li>
+</ul>
+</li>
+<li><strong>Impedenza (Z)</strong>: La "resistenza totale" in un circuito CA. È un numero complesso che descrive sia l'opposizione al flusso di corrente (modulo) sia lo sfasamento tra tensione e corrente (fase). Si misura in <strong>Ohm (Ω)</strong>.<ul>
+<li><strong>Notazione Rettangolare:</strong> $Z=R+jX$ (R = Resistenza, X = Reattanza)</li>
+</ul>
+</li>
+</ul>
+<p><strong>2.2. Impedenze dei Componenti</strong></p>
+<ul>
+<li><strong>Resistore (R):</strong> $Z_R​=R$<ul>
+<li>Non introduce sfasamento. Tensione e corrente sono in fase (θ=0∘).</li>
+</ul>
+</li>
+<li>
+<p><strong>Induttore (L):</strong> $Z_L​=jωL$ (dove ω=2πf è la pulsazione)</p>
+<ul>
+<li>La corrente è in <strong>RITARDO</strong> di 90° rispetto alla tensione.</li>
+<li><strong>Condensatore (C):</strong> $Z_C​=\frac{1}{jωC}​=\frac{-j}{ωC}$</li>
+<li>La corrente è in <strong>ANTICIPO</strong> di 90° rispetto alla tensione.</li>
+</ul>
+</li>
+</ul>
+<p>2.3. Legge di Ohm Generalizzata</p>
+<p>La Legge di Ohm riscritta per il dominio dei fasori. È la formula più importante per l'analisi in CA.
+- <strong>Formula Fasoriale:</strong> $V =I⋅Z$</p>
+<hr />
+<h4 id="3-teoremi-di-analisi-dei-circuiti"><strong>3. Teoremi di Analisi dei Circuiti</strong><a class="toc-link" href="#3-teoremi-di-analisi-dei-circuiti" title="Permanent link">&para;</a></h4>
+<p><strong>3.1. Teorema di Thevenin</strong></p>
+<ul>
+<li><strong>Scopo:</strong> Semplificare una rete elettrica complessa in un <strong>generatore di tensione ideale in serie con una resistenza</strong>.</li>
+<li><strong>Procedimento:</strong><ol>
+<li><strong>Calcolare $V_{th}$​ (Tensione di Thevenin):</strong> Si scollega il componente di interesse ("carico") e si calcola la tensione a vuoto ai suoi capi.</li>
+<li><strong>Calcolare $R_{th​}$ (Resistenza di Thevenin):</strong> Si scollega il carico e si "spengono" i generatori indipendenti (generatori di tensione → cortocircuiti, generatori di corrente → circuiti aperti). Si calcola la resistenza equivalente vista dai terminali del carico.</li>
+</ol>
+</li>
+</ul>
+<p><strong>3.2. Teorema di Norton</strong></p>
+<ul>
+<li><strong>Scopo:</strong> Semplificare una rete elettrica complessa in un <strong>generatore di corrente ideale in parallelo con una resistenza</strong>.</li>
+<li><strong>Procedimento:</strong><ol>
+<li><strong>Calcolare Rn​ (Resistenza di Norton):</strong> È <strong>identica</strong> alla Resistenza di Thevenin. $R_n​=R_{th}​$.</li>
+<li><strong>Calcolare In​ (Corrente di Norton):</strong> Si mette in cortocircuito il ramo del carico e si calcola la corrente che scorre in questo cortocircuito. In alternativa, la si ottiene dall'equivalente di Thevenin:<ul>
+<li><strong>Formula di Conversione:</strong> $I_n​=R_{th}​V_{th}​​$</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+    </div>
+    
+    <div class="sidebar"><h3>📚 Tutte le pagine</h3><ul><li><a href="cose-da-fare.html">Cose da fare</a></li><li><a href="fattore-di-potenza.html">Fattore di Potenza</a></li><li><a href="filtri.html">Filtri</a></li><li><a href="riassunto-intro.html">Fondamenti di Elettrotecnica: Analisi dei Circuiti in CC e CA</a></li><li><a href="funzione-di-trasferimento.html">Funzione di trasferimento</a></li><li><a href="la-costante-di-tempo-(τ).html">La Costante di Tempo (τ)</a></li><li><a href="note.html">NOTE</a></li><li><a href="potenza.html">Potenza</a></li><li><a href="regime-alternato.html">Regime Alternato</a></li><li><a href="regime-transitori.html">Regime transitori</a></li><li><a href="riassunto.html">Riassunto</a></li><li><a href="risposte-esame.html">Risposte Esame</a></li><li><a href="trasformata-di-laplace.html">Trasformata di Laplace</a></li></ul></div>
+    
+    <div class="footer">
+        Generato il 07/09/2025 alle 13:22 - <a href="index.html">🏠 Home</a>
+    </div>
+</body>
+</html>

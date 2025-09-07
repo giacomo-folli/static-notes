@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trasformata di Laplace - Digital Garden</title>
+    <title>Filtri - Digital Garden</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -175,24 +175,54 @@
 <body>
     <div class="header">
         <div class="breadcrumb"><a href="index.html">🏠 Home</a></div>
-        <h1>Trasformata di Laplace</h1>
+        <h1>Filtri</h1>
         <div class="meta">Ultima modifica: 07/09/2025</div>
     </div>
     
     <div class="content">
-        <p>La trasformata di Laplace è una operazione che si esegue sulle funzioni a variabile reale per trasformarle in funzioni a variabile complessa.</p>
-<p>Questa operazione, contrariamente a quello che si può pensare, consente di apportare notevoli semplificazioni nei calcoli matematici.</p>
-<p>Facciamo considerazioni solo su funzioni del tempo che sono quelle più ricorrenti nello studio dei fenomeni fisici; quindi il tempo viene considerato come variabile reale, indipendente, e le sue funzioni <em>f(t)</em> vengono definite per <em>t&gt;0</em> considerando nulle le <em>f(t)</em> per <em>t&lt;0</em>.<br />
-Indichiamo con s la variabile complessa <em>s=σ+jω</em> (pulsazione complessa) e con <em>F(s)</em> la funzioni a variabile complessa.</p>
-<p>Data una funzione <em>f(t)</em> reale e nulla per <em>t&lt;0</em>, si definisce <em>trasformata di Laplace</em> della <em>f(t)</em> e la si indica con: $F(s) = L[f(t)]$ la seguente funzione</p>
-<p><img alt="" src="https://www.edutecnica.it/sistemi/laplace/2.png" /></p>
-<p>dove s=σ+jω è la pulsazione complessa.</p>
+        <p>Un filtro è un circuito selettivo in frequenza che lascia passare i segnali in una certa banda e blocca, oppure attenua, i segnali al di fuori di tale banda. I filtri possono essere attivi o passivi.
+- I <strong>filtri passivi</strong>, usano solo componenti passivi (resistenze, condensatori e induttanze).<br />
+- I <strong>filtri attivi</strong>, oltre ai componenti passivi prevedono la presenza di componenti attivi come BJT, ed A.O.</p>
+<p>Se si definisce col termine $A$ il rapporto fra la tensione di uscita e la tensione di ingresso al filtro elettronico, si avrà</p>
+<p><img alt="rapp" src="https://www.edutecnica.it/elettronica/filtrip/1.png" /></p>
+<p>Questo significa che i filtri attivi sono circuiti amplificatori del segnale, mentre i filtri passivi, attenuano il segnale. Infatti dalle relazioni precedenti risulta che: 
+- filtri attivi =&gt; il segnale di uscita ha una ampiezza maggiore del segnale di ingresso
+- filtro passivo =&gt; il segnale di uscita sarà minore o al più uguale al segnale di ingresso</p>
+<p>Il filtri passivi possono essere costruiti con semplici componenti passivi cioè resistenze condensatori e induttanze. Per fabbricare un filtro attivo, invece, bisogna poter disporre almeno di un componente attivo: <a href="https://www.edutecnica.it/elettronica/ao/ao.htm">Amplificatore operazionale</a>, <a href="https://www.edutecnica.it/elettronica/transistor/transistor.htm">transistor</a>, <a href="https://www.edutecnica.it/elettronica/jfet/jfet.htm">JFET</a>...etc.</p>
+<p>I <a href="https://www.edutecnica.it/elettronica/filtri/filtri.htm">filtri attivi</a> , come abbiamo visto, sono in genere, studiati usando la nozione di funzione di trasferimento , perchè usando come strumento matematico la <a href="../../../Projects/static-notes/trasformata-di-laplace.html" class="internal-link">Trasformata di Laplace</a> risulta più semplice l'analisi della risposta nel tempo, mentre l'utilizzo dei <a href="https://www.edutecnica.it/sistemi/bode/bode.htm">diagrammi di Bode</a> semplifica la rappresentazione grafica nel dominio della frequenza. I filtri passivi, sono inquadrati ( con qualche deroga) nello stesso modo.</p>
+<p>Considerando la pulsazione in regime alternato, vengono definite le reattanze relative a condensatore/induttore:
+- Reattanza del condensatore: $X_C = \frac{1}{j\omega C}$ 
+- Reattanza dell'induttore: $X_L = j\omega L$ </p>
+<p>Se in un filtro il segnale di ingresso è periodico, il segnale di uscita avrà lo stesso periodo, quindi uscita ed ingresso hanno la stessa frequenza e la stessa pulsazione.</p>
+<p>I filtri passivi si individuano in tre tipologie:</p>
+<table>
+<thead>
+<tr>
+<th>Filtro</th>
+<th>Condizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>passa alto</strong></td>
+<td>lasciano libero transito alle alte frequenze, bloccando quelle basse</td>
+</tr>
+<tr>
+<td><strong>passa banda</strong></td>
+<td>lasciano libero transito ad un gruppo di frequenze intermedie, bloccando quelle alte e quelle basse</td>
+</tr>
+<tr>
+<td><strong>passa basso</strong></td>
+<td>lasciano libero transito alle basse frequenze, bloccando quelle alte</td>
+</tr>
+</tbody>
+</table>
     </div>
     
-    <div class="sidebar"><h3>🔗 Pagine che linkano qui</h3><ul><li><a href="Filtri.html">Filtri</a></li></ul></div><div class="sidebar"><h3>📚 Tutte le pagine</h3><ul><li><a href="Cose da fare.html">Cose da fare</a></li><li><a href="Fattore di Potenza.html">Fattore di Potenza</a></li><li><a href="Filtri.html">Filtri</a></li><li><a href="Riassunto Intro.html">Fondamenti di Elettrotecnica: Analisi dei Circuiti in CC e CA</a></li><li><a href="Funzione di trasferimento.html">Funzione di trasferimento</a></li><li><a href="La Costante di Tempo (τ).html">La Costante di Tempo (τ)</a></li><li><a href="NOTE.html">NOTE</a></li><li><a href="Potenza.html">Potenza</a></li><li><a href="Regime Alternato.html">Regime Alternato</a></li><li><a href="Regime transitori.html">Regime transitori</a></li><li><a href="Riassunto.html">Riassunto</a></li><li><a href="Riepilogo di Elettrotecnica - Formule e Metodi Fondamentali.html">Riepilogo di Elettrotecnica - Formule e Metodi Fondamentali</a></li><li><a href="Risposte Esame.html">Risposte Esame</a></li></ul></div>
+    <div class="sidebar"><h3>📚 Tutte le pagine</h3><ul><li><a href="cose-da-fare.html">Cose da fare</a></li><li><a href="fattore-di-potenza.html">Fattore di Potenza</a></li><li><a href="riassunto-intro.html">Fondamenti di Elettrotecnica: Analisi dei Circuiti in CC e CA</a></li><li><a href="funzione-di-trasferimento.html">Funzione di trasferimento</a></li><li><a href="la-costante-di-tempo-(τ).html">La Costante di Tempo (τ)</a></li><li><a href="note.html">NOTE</a></li><li><a href="potenza.html">Potenza</a></li><li><a href="regime-alternato.html">Regime Alternato</a></li><li><a href="regime-transitori.html">Regime transitori</a></li><li><a href="riassunto.html">Riassunto</a></li><li><a href="riepilogo-di-elettrotecnica-formule-e-metodi-fondamentali.html">Riepilogo di Elettrotecnica - Formule e Metodi Fondamentali</a></li><li><a href="risposte-esame.html">Risposte Esame</a></li><li><a href="trasformata-di-laplace.html">Trasformata di Laplace</a></li></ul></div>
     
     <div class="footer">
-        Generato il 07/09/2025 alle 12:54 - <a href="index.html">🏠 Home</a>
+        Generato il 07/09/2025 alle 13:23 - <a href="index.html">🏠 Home</a>
     </div>
 </body>
 </html>
