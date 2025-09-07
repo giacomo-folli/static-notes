@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondamenti di Elettrotecnica: Analisi dei Circuiti in CC e CA - Digital Garden</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fafafa;
+        }
+        
+        .header {
+            border-bottom: 2px solid #e1e1e1;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+        
+        .breadcrumb {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .breadcrumb a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .meta {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .sidebar h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            border-bottom: 1px solid #e1e1e1;
+            padding-bottom: 10px;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .sidebar li {
+            margin-bottom: 5px;
+        }
+        
+        .sidebar a {
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        
+        .internal-link {
+            color: #0066cc;
+            text-decoration: none;
+            border-bottom: 1px dotted #0066cc;
+        }
+        
+        .internal-link:hover {
+            background-color: #f0f8ff;
+            text-decoration: none;
+        }
+        
+        .broken-link {
+            color: #cc0000;
+            text-decoration: none;
+            border-bottom: 1px dotted #cc0000;
+        }
+        
+        .toc {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .toc ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .highlight {
+            background: #f8f8f8;
+            border: 1px solid #e1e1e1;
+            border-radius: 4px;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        
+        blockquote {
+            border-left: 4px solid #0066cc;
+            margin: 0;
+            padding: 0 20px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #e1e1e1;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #666;
+            font-size: 0.8em;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e1e1e1;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="breadcrumb"><a href="index.html">🏠 Home</a></div>
+        <h1>Fondamenti di Elettrotecnica: Analisi dei Circuiti in CC e CA</h1>
+        <div class="meta">Ultima modifica: 19/06/2025</div>
+    </div>
+    
+    <div class="content">
+        <h1 id="fondamenti-di-elettrotecnica-analisi-dei-circuiti-in-cc-e-ca">Fondamenti di Elettrotecnica: Analisi dei Circuiti in CC e CA<a class="toc-link" href="#fondamenti-di-elettrotecnica-analisi-dei-circuiti-in-cc-e-ca" title="Permanent link">&para;</a></h1>
+<h2 id="introduzione">Introduzione<a class="toc-link" href="#introduzione" title="Permanent link">&para;</a></h2>
+<p>L'elettrotecnica si basa su principi fondamentali che governano il comportamento dell'energia elettrica nei circuiti. La comprensione di questi principi richiede l'analisi di due domini distinti: quello della corrente continua (CC), caratterizzato da grandezze costanti nel tempo, e quello della corrente alternata (CA), dove le grandezze variano sinusoidalmente. Questo documento presenta una sintesi organica dei concetti chiave, partendo dalle leggi fondamentali fino agli strumenti matematici avanzati per l'analisi in regime sinusoidale.</p>
+<h2 id="parte-1-analisi-dei-circuiti-in-corrente-continua-cc">Parte 1: Analisi dei Circuiti in Corrente Continua (CC)<a class="toc-link" href="#parte-1-analisi-dei-circuiti-in-corrente-continua-cc" title="Permanent link">&para;</a></h2>
+<h3 id="11-la-legge-di-ohm-relazione-fondamentale-tra-le-grandezze-elettriche">1.1 La Legge di Ohm: Relazione Fondamentale tra le Grandezze Elettriche<a class="toc-link" href="#11-la-legge-di-ohm-relazione-fondamentale-tra-le-grandezze-elettriche" title="Permanent link">&para;</a></h3>
+<p>La legge di Ohm rappresenta la pietra angolare dell'elettrotecnica, stabilendo una relazione lineare tra tensione, corrente e resistenza in un elemento ohmico:</p>
+<p>$$V = I \cdot R$$</p>
+<p>Dove:</p>
+<ul>
+<li><strong>V</strong> rappresenta la differenza di potenziale (tensione) misurata in volt [V]</li>
+<li><strong>I</strong> indica l'intensità di corrente misurata in ampere [A]</li>
+<li><strong>R</strong> è la resistenza elettrica misurata in ohm [Ω]</li>
+</ul>
+<p><strong>Interpretazione fisica</strong>: La resistenza quantifica l'opposizione che un materiale offre al passaggio della corrente elettrica. Questa opposizione è dovuta alle collisioni degli elettroni di conduzione con gli atomi del reticolo cristallino del materiale.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">graph</span><span class="w"> </span><span class="n">LR</span>
+<span class="w">    </span><span class="n">A</span><span class="p">[</span><span class="n">Tensione</span><span class="w"> </span><span class="n">V</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">Differenza</span><span class="w"> </span><span class="n">di</span><span class="w"> </span><span class="n">Potenziale</span><span class="p">]</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="n">Corrente</span><span class="w"> </span><span class="n">I</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">Flusso</span><span class="w"> </span><span class="n">di</span><span class="w"> </span><span class="n">Cariche</span><span class="p">]</span>
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="n">Resistenza</span><span class="w"> </span><span class="n">R</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">Opposizione</span><span class="w"> </span><span class="n">al</span><span class="w"> </span><span class="n">Flusso</span><span class="p">]</span>
+<span class="w">    </span><span class="n">C</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">A</span>
+
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">e1f5fe</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">f3e5f5</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">fff3e0</span>
+</code></pre></div>
+
+<h3 id="12-le-leggi-di-kirchhoff-principi-di-conservazione-nei-circuiti">1.2 Le Leggi di Kirchhoff: Principi di Conservazione nei Circuiti<a class="toc-link" href="#12-le-leggi-di-kirchhoff-principi-di-conservazione-nei-circuiti" title="Permanent link">&para;</a></h3>
+<p>Le leggi di Kirchhoff derivano dai principi di conservazione della carica elettrica e dell'energia, fornendo gli strumenti matematici per l'analisi sistematica dei circuiti elettrici.</p>
+<h4 id="121-prima-legge-di-kirchhoff-kcl-kirchhoffs-current-law">1.2.1 Prima Legge di Kirchhoff (KCL - Kirchhoff's Current Law)<a class="toc-link" href="#121-prima-legge-di-kirchhoff-kcl-kirchhoffs-current-law" title="Permanent link">&para;</a></h4>
+<p><strong>Enunciato</strong>: La somma algebrica delle correnti che convergono in un nodo è uguale a zero.</p>
+<p>$$\sum_{k=1}^{n} I_k = 0$$</p>
+<p><strong>Principio fisico</strong>: La legge deriva dal principio di conservazione della carica elettrica. In regime stazionario, non può verificarsi accumulo di carica in un punto del circuito.</p>
+<div class="highlight"><pre><span></span><code><span class="n">graph</span><span class="w"> </span><span class="n">TD</span>
+<span class="w">    </span><span class="n">A</span><span class="p">[</span><span class="n">I₁</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="n">A</span><span class="p">]</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">C</span><span class="p">((</span><span class="n">Nodo</span><span class="p">))</span>
+<span class="w">    </span><span class="n">B</span><span class="p">[</span><span class="n">I₂</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="n">A</span><span class="p">]</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">C</span>
+<span class="w">    </span><span class="n">C</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">I₃</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="n">A</span><span class="p">]</span>
+<span class="w">    </span><span class="n">C</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">E</span><span class="p">[</span><span class="n">I₄</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="n">A</span><span class="p">]</span>
+
+<span class="w">    </span><span class="n">F</span><span class="p">[</span><span class="n">Equazione</span><span class="w"> </span><span class="n">KCL</span><span class="o">:&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">I₁</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">I₂</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">I₃</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">I₄</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span>
+
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">ffeb3b</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">e8f5e8</span>
+</code></pre></div>
+
+<h4 id="122-seconda-legge-de-kirchhoff-kvl-kirchhoffs-voltage-law">1.2.2 Seconda Legge de Kirchhoff (KVL - Kirchhoff's Voltage Law)<a class="toc-link" href="#122-seconda-legge-de-kirchhoff-kvl-kirchhoffs-voltage-law" title="Permanent link">&para;</a></h4>
+<p><strong>Enunciato</strong>: La somma algebrica delle tensioni lungo qualsiasi percorso chiuso (maglia) è uguale a zero.</p>
+<p>$$\sum_{k=1}^{n} V_k = 0$$</p>
+<p><strong>Principio fisico</strong>: La legge deriva dal fatto che il campo elettrico è conservativo, quindi il lavoro compiuto per spostare una carica lungo un percorso chiuso è nullo.</p>
+<div class="highlight"><pre><span></span><code><span class="n">graph</span><span class="w"> </span><span class="n">LR</span>
+<span class="w">    </span><span class="n">A</span><span class="p">[</span><span class="n">V_gen</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="n">V</span><span class="p">]</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="n">R₁</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">V₁</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="n">V</span><span class="p">]</span>
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="n">R₂</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">V₂</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="n">V</span><span class="p">]</span>
+<span class="w">    </span><span class="n">C</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">A</span>
+
+<span class="w">    </span><span class="n">D</span><span class="p">[</span><span class="n">Equazione</span><span class="w"> </span><span class="n">KVL</span><span class="o">:&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">V_gen</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">V₁</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">V₂</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="mi">12</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span>
+
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="mi">4</span><span class="n">caf50</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">ff9800</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">ff9800</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">e8f5e8</span>
+</code></pre></div>
+
+<h3 id="13-configurazioni-circuitali-serie-e-parallelo">1.3 Configurazioni Circuitali: Serie e Parallelo<a class="toc-link" href="#13-configurazioni-circuitali-serie-e-parallelo" title="Permanent link">&para;</a></h3>
+<p>La comprensione delle configurazioni serie e parallelo è essenziale per l'analisi di circuiti complessi, in quanto ogni circuito può essere ricondotto a combinazioni di queste configurazioni elementari.</p>
+<h4 id="131-circuiti-serie">1.3.1 Circuiti Serie<a class="toc-link" href="#131-circuiti-serie" title="Permanent link">&para;</a></h4>
+<p><strong>Definizione</strong>: In una configurazione serie, i componenti sono attraversati dalla stessa corrente e condividono un unico percorso per il flusso di corrente.</p>
+<p><strong>Caratteristiche principali</strong>:</p>
+<ul>
+<li>Corrente costante: $I_1 = I_2 = I_{tot}$</li>
+<li>Tensioni additive: $V_{tot} = V_1 + V_2 + ... + V_n$</li>
+<li>Resistenza equivalente: $R_{eq} = R_1 + R_2 + ... + R_n$</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nf">graph</span><span class="w"> </span><span class="n">LR</span>
+<span class="w">    </span><span class="n">A</span><span class="p">[</span><span class="n">Generatore</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="n">V</span><span class="p">]</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="n">R₁</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="err">Ω</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">V₁</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="n">V</span><span class="p">]</span>
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="n">R₂</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="err">Ω</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">V₂</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="n">V</span><span class="p">]</span>
+<span class="w">    </span><span class="n">C</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">A</span>
+
+<span class="w">    </span><span class="n">D</span><span class="p">[</span><span class="n">I</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="n">A</span><span class="w"> </span><span class="n">attraversa</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">tutti</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">componenti</span><span class="p">]</span>
+<span class="w">    </span><span class="n">E</span><span class="p">[</span><span class="n">R_eq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R₁</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">R₂</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="err">Ω</span><span class="p">]</span>
+
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="mi">4</span><span class="n">caf50</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="mf">2196f</span><span class="mi">3</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="mf">2196f</span><span class="mi">3</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">fff3e0</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">fff3e0</span>
+</code></pre></div>
+
+<h4 id="132-circuiti-parallelo">1.3.2 Circuiti Parallelo<a class="toc-link" href="#132-circuiti-parallelo" title="Permanent link">&para;</a></h4>
+<p><strong>Definizione</strong>: In una configurazione parallelo, i componenti sono sottoposti alla stessa tensione e offrono percorsi alternativi per il flusso di corrente.</p>
+<p><strong>Caratteristiche principali</strong>:</p>
+<ul>
+<li>Tensione costante: $V_1 = V_2 = V_{tot}$</li>
+<li>Correnti additive: $I_{tot} = I_1 + I_2 + ... + I_n$</li>
+<li>Resistenza equivalente: $\frac{1}{R_{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + ... + \frac{1}{R_n}$</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">graph</span><span class="w"> </span><span class="n">TD</span>
+<span class="w">    </span><span class="n">A</span><span class="p">[</span><span class="n">Generatore</span><span class="w"> </span><span class="n">V</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="n">V</span><span class="p">]</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="n">Nodo</span><span class="w"> </span><span class="n">Superiore</span><span class="p">]</span>
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="n">R₁</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="n">Ω</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">I₁</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="n">A</span><span class="p">]</span>
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">R₂</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="n">Ω</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">I₂</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="n">A</span><span class="p">]</span>
+<span class="w">    </span><span class="n">C</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">E</span><span class="p">[</span><span class="n">Nodo</span><span class="w"> </span><span class="n">Inferiore</span><span class="p">]</span>
+<span class="w">    </span><span class="n">D</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">E</span>
+<span class="w">    </span><span class="n">E</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">A</span>
+
+<span class="w">    </span><span class="n">F</span><span class="p">[</span><span class="n">I_tot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I₁</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">I₂</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="n">A</span><span class="p">]</span>
+<span class="w">    </span><span class="n">G</span><span class="p">[</span><span class="n">R_eq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R₁R₂</span><span class="o">/</span><span class="n">R₁</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">R₂</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.4</span><span class="n">Ω</span><span class="p">]</span>
+
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="mi">4</span><span class="n">caf50</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">ffeb3b</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="mf">2196f</span><span class="mi">3</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="mf">2196f</span><span class="mi">3</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">ffeb3b</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">fff3e0</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">fff3e0</span>
+</code></pre></div>
+
+<h2 id="parte-2-analisi-dei-circuiti-in-corrente-alternata-ca">Parte 2: Analisi dei Circuiti in Corrente Alternata (CA)<a class="toc-link" href="#parte-2-analisi-dei-circuiti-in-corrente-alternata-ca" title="Permanent link">&para;</a></h2>
+<h3 id="21-rappresentazione-fasoriale-strumento-matematico-per-lanalisi-in-ca">2.1 Rappresentazione Fasoriale: Strumento Matematico per l'Analisi in CA<a class="toc-link" href="#21-rappresentazione-fasoriale-strumento-matematico-per-lanalisi-in-ca" title="Permanent link">&para;</a></h3>
+<p>L'analisi dei circuiti in corrente alternata richiede strumenti matematici specifici per gestire grandezze che variano sinusoidalmente nel tempo. La rappresentazione fasoriale trasforma il problema dall'ambito temporale a quello della frequenza, semplificando notevolmente i calcoli.</p>
+<p><strong>Definizione di fasore</strong>: Un fasore è un numero complesso che rappresenta l'ampiezza e la fase di una grandezza sinusoidale.</p>
+<p>Per una tensione sinusoidale $v(t) = V_m \cos(\omega t + \phi)$, il fasore corrispondente è: $$\vec{V} = V_m e^{j\phi} = V_m \angle \phi$$
+Grandezza nel Tempo $v(t) = V_m cos(ωt + φ)]$ --&gt; Trasformazione Fasoriale</p>
+<p>Vantaggi:
+- Calcoli algebrici
+- Rappresentazione vettoriale
+- Analisi delle fasi</p>
+<h3 id="22-impedenza-generalizzazione-della-resistenza-in-ca">2.2 Impedenza: Generalizzazione della Resistenza in CA<a class="toc-link" href="#22-impedenza-generalizzazione-della-resistenza-in-ca" title="Permanent link">&para;</a></h3>
+<p>L'impedenza rappresenta l'opposizione complessiva che un circuito offre al passaggio della corrente alternata, tenendo conto sia degli effetti resistivi che reattivi.</p>
+<p><strong>Definizione matematica</strong>: $$Z = R + jX$$</p>
+<p>Dove:</p>
+<ul>
+<li><strong>R</strong> è la resistenza (parte reale)</li>
+<li><strong>X</strong> è la reattanza (parte immaginaria)</li>
+<li><strong>j</strong> è l'unità immaginaria</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nf">graph</span><span class="w"> </span><span class="n">TD</span>
+<span class="w">    </span><span class="n">A</span><span class="p">[</span><span class="n">Impedenza</span><span class="w"> </span><span class="n">Z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">jX</span><span class="p">]</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="n">Parte</span><span class="w"> </span><span class="n">Reale</span><span class="w"> </span><span class="n">R</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">Resistenza</span><span class="p">]</span>
+<span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="n">Parte</span><span class="w"> </span><span class="n">Immaginaria</span><span class="w"> </span><span class="n">jX</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">Reattanza</span><span class="p">]</span>
+
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">Dissipazione</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">di</span><span class="w"> </span><span class="n">Energia</span><span class="p">]</span>
+<span class="w">    </span><span class="n">C</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">E</span><span class="p">[</span><span class="n">Sfasamento</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">Tensione</span><span class="o">-</span><span class="n">Corrente</span><span class="p">]</span>
+
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">e1f5fe</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">ffcdd2</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">c8e6c9</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">fff3e0</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">fff3e0</span>
+</code></pre></div>
+
+<h3 id="23-comportamento-dei-componenti-elementari-in-ca">2.3 Comportamento dei Componenti Elementari in CA<a class="toc-link" href="#23-comportamento-dei-componenti-elementari-in-ca" title="Permanent link">&para;</a></h3>
+<h4 id="231-resistore">2.3.1 Resistore<a class="toc-link" href="#231-resistore" title="Permanent link">&para;</a></h4>
+<p><strong>Impedenza</strong>: $Z_R = R$ <strong>Caratteristica</strong>: La tensione e la corrente sono in fase (sfasamento = 0°)</p>
+<h4 id="232-induttore">2.3.2 Induttore<a class="toc-link" href="#232-induttore" title="Permanent link">&para;</a></h4>
+<p><strong>Impedenza</strong>: $Z_L = j\omega L$ <strong>Caratteristica</strong>: La corrente è in ritardo di 90° rispetto alla tensione <strong>Reattanza induttiva</strong>: $X_L = \omega L = 2\pi f L$</p>
+<h4 id="233-condensatore">2.3.3 Condensatore<a class="toc-link" href="#233-condensatore" title="Permanent link">&para;</a></h4>
+<p><strong>Impedenza</strong>: $Z_C = -j\frac{1}{\omega C}$ <strong>Caratteristica</strong>: La corrente è in anticipo di 90° rispetto alla tensione <strong>Reattanza capacitiva</strong>: $X_C = \frac{1}{\omega C} = \frac{1}{2\pi f C}$</p>
+<div class="highlight"><pre><span></span><code><span class="nf">graph</span><span class="w"> </span><span class="n">TD</span>
+<span class="w">    </span><span class="n">A</span><span class="p">[</span><span class="n">Componenti</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="n">CA</span><span class="p">]</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="n">Resistore</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">Z_R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">R</span><span class="p">]</span>
+<span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="n">Induttore</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">Z_L</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jωL</span><span class="p">]</span>
+<span class="w">    </span><span class="n">A</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">Condensatore</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">Z_C</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="n">j</span><span class="o">/</span><span class="err">ω</span><span class="n">C</span><span class="p">]</span>
+
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">E</span><span class="p">[</span><span class="n">Sfasamento</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="err">°</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">V</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="n">I</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="n">fase</span><span class="p">]</span>
+<span class="w">    </span><span class="n">C</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">F</span><span class="p">[</span><span class="n">Sfasamento</span><span class="o">:</span><span class="w"> </span><span class="o">+</span><span class="mi">90</span><span class="err">°</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">I</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="n">ritardo</span><span class="w"> </span><span class="n">su</span><span class="w"> </span><span class="n">V</span><span class="p">]</span>
+<span class="w">    </span><span class="n">D</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">G</span><span class="p">[</span><span class="n">Sfasamento</span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="mi">90</span><span class="err">°</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">I</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="n">anticipo</span><span class="w"> </span><span class="n">su</span><span class="w"> </span><span class="n">V</span><span class="p">]</span>
+
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">e1f5fe</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">ffcdd2</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">c8e6c9</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">fff8e1</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">f3e5f5</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">f3e5f5</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">f3e5f5</span>
+</code></pre></div>
+
+<h3 id="24-legge-di-ohm-generalizzata-per-i-circuiti-in-ca">2.4 Legge di Ohm Generalizzata per i Circuiti in CA<a class="toc-link" href="#24-legge-di-ohm-generalizzata-per-i-circuiti-in-ca" title="Permanent link">&para;</a></h3>
+<p>La legge di Ohm si estende naturalmente ai circuiti in corrente alternata utilizzando la notazione fasoriale:</p>
+<p>$$\vec{V} = \vec{I} \cdot Z$$</p>
+<p>Questa relazione mantiene la stessa forma della legge di Ohm classica, ma opera nel dominio complesso, permettendo di trattare simultaneamente ampiezza e fase delle grandezze elettriche.</p>
+<p><strong>Vantaggi dell'approccio fasoriale</strong>:</p>
+<ul>
+<li>Possibilità di applicare le stesse tecniche di analisi utilizzate per i circuiti in CC</li>
+<li>Trattamento simultaneo di ampiezza e fase</li>
+<li>Semplificazione dei calcoli attraverso l'algebra complessa</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nf">graph</span><span class="w"> </span><span class="n">LR</span>
+<span class="w">    </span><span class="n">A</span><span class="p">[</span><span class="n">Circuito</span><span class="w"> </span><span class="n">CA</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">Grandezze</span><span class="w"> </span><span class="n">Sinusoidali</span><span class="p">]</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="n">Trasformazione</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">Fasoriale</span><span class="p">]</span>
+<span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="n">Analisi</span><span class="w"> </span><span class="n">nel</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">Dominio</span><span class="w"> </span><span class="n">Complesso</span><span class="p">]</span>
+<span class="w">    </span><span class="n">C</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">D</span><span class="p">[</span><span class="n">Applicazione</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">Legge</span><span class="w"> </span><span class="n">di</span><span class="w"> </span><span class="n">Ohm</span><span class="o">:</span><span class="w"> </span><span class="n">V</span><span class="err">⃗</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I</span><span class="err">⃗</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="n">Z</span><span class="p">]</span>
+<span class="w">    </span><span class="n">D</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">E</span><span class="p">[</span><span class="n">Risultati</span><span class="w"> </span><span class="kr">in</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">Forma</span><span class="w"> </span><span class="n">Fasoriale</span><span class="p">]</span>
+<span class="w">    </span><span class="n">E</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">F</span><span class="p">[</span><span class="n">Trasformazione</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">Inversa</span><span class="p">]</span>
+<span class="w">    </span><span class="n">F</span><span class="w"> </span><span class="o">--&gt;</span><span class="w"> </span><span class="n">G</span><span class="p">[</span><span class="n">Grandezze</span><span class="w"> </span><span class="n">nel</span><span class="o">&lt;</span><span class="n">br</span><span class="o">/&gt;</span><span class="n">Dominio</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="n">Tempo</span><span class="p">]</span>
+
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">ffcdd2</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">e1f5fe</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">c8e6c9</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">fff8e1</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">E</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">f3e5f5</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">F</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">e8f5e8</span>
+<span class="w">    </span><span class="n">style</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="n">fill</span><span class="o">:</span><span class="err">#</span><span class="n">ffcdd2</span>
+</code></pre></div>
+
+<h2 id="conclusioni">Conclusioni<a class="toc-link" href="#conclusioni" title="Permanent link">&para;</a></h2>
+<p>L'elettrotecnica fornisce gli strumenti matematici e concettuali per comprendere e analizzare il comportamento dell'energia elettrica nei circuiti. La progressione logica dalla corrente continua alla corrente alternata rappresenta un percorso di apprendimento che consolida gradualmente la comprensione dei fenomeni elettrici.</p>
+<p>La padronanza di questi concetti fondamentali costituisce la base per affrontare argomenti più avanzati come l'analisi di reti complesse, i sistemi trifase, le macchine elettriche e i sistemi di controllo. L'approccio metodico presentato, che parte dalle leggi fondamentali per arrivare agli strumenti matematici avanzati, rispecchia la struttura logica della disciplina e fornisce le competenze necessarie per l'analisi sistematica dei circuiti elettrici.</p>
+    </div>
+    
+    <div class="sidebar"><h3>📚 Tutte le pagine</h3><ul><li><a href="Cose da fare.html">Cose da fare</a></li><li><a href="Fattore di Potenza.html">Fattore di Potenza</a></li><li><a href="Filtri.html">Filtri</a></li><li><a href="Funzione di trasferimento.html">Funzione di trasferimento</a></li><li><a href="La Costante di Tempo (τ).html">La Costante di Tempo (τ)</a></li><li><a href="NOTE.html">NOTE</a></li><li><a href="Potenza.html">Potenza</a></li><li><a href="Regime Alternato.html">Regime Alternato</a></li><li><a href="Regime transitori.html">Regime transitori</a></li><li><a href="Riassunto.html">Riassunto</a></li><li><a href="Riepilogo di Elettrotecnica - Formule e Metodi Fondamentali.html">Riepilogo di Elettrotecnica - Formule e Metodi Fondamentali</a></li><li><a href="Risposte Esame.html">Risposte Esame</a></li><li><a href="Trasformata di Laplace.html">Trasformata di Laplace</a></li></ul></div>
+    
+    <div class="footer">
+        Generato il 07/09/2025 alle 12:54 - <a href="index.html">🏠 Home</a>
+    </div>
+</body>
+</html>
