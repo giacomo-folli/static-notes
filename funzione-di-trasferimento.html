@@ -181,13 +181,13 @@
     
     <div class="content">
         <p>La funzione di trasferimento di un <span class="broken-link" title="Pagina non trovata">Filtri|filtro</span> è uno strumento matematico fondamentale che ci permette di descrivere completamente il comportamento di un sistema lineare nel dominio delle frequenze. Immaginiamola come una "carta d'identità" del filtro che ci dice esattamente come questo modificherà ogni singola componente di frequenza di un segnale in ingresso.</p>
-<p>Per comprendere meglio questo concetto, partiamo da una definizione pratica. La funzione di trasferimento H(jω) è il rapporto tra il segnale di uscita Y(jω) e il segnale di ingresso X(jω) nel dominio delle frequenze:</p>
-<p>$$H(jw) = \frac{Y(jw)}{X(jw)}$$
+<p>Per comprendere meglio questo concetto, partiamo da una definizione pratica. La funzione di trasferimento $H(jω)$ è il rapporto tra il segnale di uscita $Y(jω)$ e il segnale di ingresso $X(jω)$ nel dominio delle frequenze:
+$$H(jw) = \frac{Y(jw)}{X(jw)}$$
 $ω$ -&gt; pulsazione angolare ($2πf$, con f frequenza in $Hz$)
 $j$  -&gt; unità immaginaria</p>
 <p>Questa funzione è complessa, il che significa che ha sia una parte reale che una immaginaria. Possiamo rappresentarla in forma polare come: 
-H(jω) = |H(jω)| × e^(jφ(ω))</p>
-<p>Qui $|H(jω)|$ rappresenta il modulo (o ampiezza) della funzione di trasferimento, mentre φ(ω) rappresenta la fase.</p>
+$$H(jω) = |H(jω)| x e^{(jφ(ω))}$$
+Qui $|H(jω)|$ rappresenta il modulo (o ampiezza) della funzione di trasferimento, mentre φ(ω) rappresenta la fase.</p>
 <p>Il modulo ci dice di quanto viene amplificato o attenuato il segnale a ogni frequenza. Se |H(jω)| &gt; 1, quella frequenza viene amplificata; se |H(jω)| &lt; 1, viene attenuata; se |$H(jω)| = 0$, quella frequenza viene completamente eliminata.</p>
 <p>La fase φ(ω) ci informa invece di quanto viene ritardato (o anticipato) il segnale a ogni frequenza. Questo aspetto è cruciale perché determina la forma d'onda del segnale filtrato, specialmente quando il segnale contiene più componenti di frequenza.</p>
 <p>Per rendere tutto più concreto, consideriamo un semplice filtro passa-basso RC. Questo circuito, formato da una resistenza R in serie e un condensatore C in parallelo all'uscita, ha una funzione di trasferimento:
@@ -197,17 +197,17 @@ Analizzando questa espressione, possiamo calcolare:
 - La fase: φ(ω) = -arctan(ωRC)</p>
 <p>A basse frequenze (ω → 0), il modulo tende a 1 e la fase a 0°, quindi il segnale passa praticamente inalterato. Ad alte frequenze (ω → ∞), il modulo tende a 0 e la fase a -90°, quindi il segnale viene fortemente attenuato e ritardato.</p>
 <p>La frequenza di taglio $ωc = 1/(RC)$ rappresenta il punto in cui |H(jωc)| = 1/√2 ≈ 0.707, corrispondente a un'attenuazione di 3 dB.</p>
-<p>Un aspetto importante da sottolineare è che la funzione di trasferimento ci permette di predire il comportamento del filtro con qualsiasi tipo di segnale in ingresso. Se conosciamo lo spettro del segnale di ingresso X(jω) e la funzione di trasferimento H(jω), possiamo immediatamente calcolare lo spettro del segnale di uscita come:
+<p>Un aspetto importante da sottolineare è che la funzione di trasferimento ci permette di predire il comportamento del <span class="broken-link" title="Pagina non trovata">Filtri|filtro</span> con qualsiasi tipo di segnale in ingresso. Se conosciamo lo spettro del segnale di ingresso X(jω) e la funzione di trasferimento H(jω), possiamo immediatamente calcolare lo spettro del segnale di uscita come:
 $$Y(jω) = H(jω) × X(jω)$$
 Questo prodotto viene eseguito frequenza per frequenza, moltiplicando sia i moduli che sommando le fasi.</p>
-<p>La rappresentazione grafica della funzione di trasferimento, chiamata <strong>diagramma di Bode</strong>, è particolarmente utile per visualizzare il comportamento del filtro. Questo diagramma mostra il modulo (in dB) e la fase (in gradi) in funzione della frequenza, tipicamente su scala logaritmica.</p>
-<p>Comprendere la funzione di trasferimento è essenziale perché ci permette di progettare filtri con caratteristiche specifiche, analizzare la stabilità dei sistemi, e prevedere esattamente come un filtro modificherà qualsiasi segnale che lo attraversa.</p>
+<p>La rappresentazione grafica della funzione di trasferimento è fatta mediante i <a href="../../../Projects/static-notes/diagrammi-di-bode.html" class="internal-link">Diagrammi di Bode</a>. 
+Comprendere la funzione di trasferimento è essenziale perché ci permette di progettare filtri con caratteristiche specifiche, analizzare la stabilità dei sistemi, e prevedere esattamente come un filtro modificherà qualsiasi segnale che lo attraversa.</p>
     </div>
     
-    <div class="sidebar"><h3>📚 Tutte le pagine</h3><ul><li><a href="cose-da-fare.html">Cose da fare</a></li><li><a href="fattore-di-potenza.html">Fattore di Potenza</a></li><li><a href="filtri.html">Filtri</a></li><li><a href="riassunto-intro.html">Fondamenti di Elettrotecnica: Analisi dei Circuiti in CC e CA</a></li><li><a href="la-costante-di-tempo-(τ).html">La Costante di Tempo (τ)</a></li><li><a href="note.html">NOTE</a></li><li><a href="potenza.html">Potenza</a></li><li><a href="regime-alternato.html">Regime Alternato</a></li><li><a href="regime-transitori.html">Regime transitori</a></li><li><a href="riassunto.html">Riassunto</a></li><li><a href="riepilogo-di-elettrotecnica-formule-e-metodi-fondamentali.html">Riepilogo di Elettrotecnica - Formule e Metodi Fondamentali</a></li><li><a href="risposte-esame.html">Risposte Esame</a></li><li><a href="trasformata-di-laplace.html">Trasformata di Laplace</a></li></ul></div>
+    <div class="sidebar"><h3>📚 Tutte le pagine</h3><ul><li><a href="accoppiamento-magnetico.html">Accoppiamento Magnetico</a></li><li><a href="cose-da-fare.html">Cose da fare</a></li><li><a href="diagrammi-di-bode.html">Diagrammi di Bode</a></li><li><a href="fasori.html">Fasori</a></li><li><a href="fattore-di-potenza.html">Fattore di Potenza</a></li><li><a href="filtri.html">Filtri</a></li><li><a href="riassunto-intro.html">Fondamenti di Elettrotecnica: Analisi dei Circuiti in CC e CA</a></li><li><a href="impedenza.html">Impedenza</a></li><li><a href="la-costante-di-tempo-(τ).html">La Costante di Tempo (τ)</a></li><li><a href="le-leggi-di-kirchhoff.html">Le leggi di Kirchhoff</a></li><li><a href="note.html">NOTE</a></li><li><a href="potenza.html">Potenza</a></li><li><a href="regime-alternato.html">Regime Alternato</a></li><li><a href="regime-transitorio.html">Regime transitorio</a></li><li><a href="riassunto.html">Riassunto</a></li><li><a href="risposte-esame.html">Risposte Esame</a></li><li><a href="trasformata-di-laplace.html">Trasformata di Laplace</a></li><li><a href="trasformatori.html">Trasformatori</a></li></ul></div>
     
     <div class="footer">
-        Generato il 07/09/2025 alle 13:23 - <a href="index.html">🏠 Home</a>
+        Generato il 08/09/2025 alle 16:55 - <a href="index.html">🏠 Home</a>
     </div>
 </body>
 </html>
